@@ -18,8 +18,7 @@ import com.vivek.pdf.entity.Employee;
 import com.vivek.pdf.service.EmployeeService;
 import com.vivek.pdf.util.PDFGenerator;
 
-//@RestController 
-@Controller
+@RestController 
 public class EmployeeController {
 	
 	@Autowired

@@ -35,10 +35,10 @@ public class PDFGenerator {
 		
 		document.add(para);
 		
-		PdfPTable table = new PdfPTable(4);
+		PdfPTable table = new PdfPTable(5);
 		
 		table.setWidthPercentage(100f);
-		table.setWidths(new int[] {3,3,3,3});
+		table.setWidths(new int[] {3,3,3,3,3});
 		table.setSpacingBefore(5);
 		
 		PdfPCell cell = new PdfPCell();

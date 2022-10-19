@@ -7,8 +7,8 @@ import com.vivek.pdf.entity.Employee;
 public interface EmployeeService {
 	
 //	Get
-	public void addEmp(Employee employee);
-	public List<Employee> getEmployeeList();
+	void addEmp(Employee employee);
+	List<Employee> getEmployeeList();
 	
 //	Save
 //	public void saveEmp(Employee emp);

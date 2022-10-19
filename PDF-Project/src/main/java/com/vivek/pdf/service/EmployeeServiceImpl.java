@@ -23,11 +23,11 @@ public class EmployeeServiceImpl implements EmployeeService {
 
 	@Override
 	public List<Employee> getEmployeeList() {
-//		Iterable<Employee> empItr = empRepo.findAll();
-//		List<Employee> emplist= new ArrayList<Employee>();
-//		empItr.forEach(x-> emplist.add(x));
-//		return emplist;
-		return empRepo.findAll();
+		Iterable<Employee> empItr = empRepo.findAll();
+		List<Employee> emplist= new ArrayList<Employee>();
+		empItr.forEach(x-> emplist.add(x));
+		return emplist;
+//		return empRepo.findAll();
 
 	}
 
