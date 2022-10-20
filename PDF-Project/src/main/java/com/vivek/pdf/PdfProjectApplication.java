@@ -1,5 +1,7 @@
 package com.vivek.pdf;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -12,12 +14,13 @@ import com.vivek.pdf.service.EmployeeService;
 
 @SpringBootApplication
 public class PdfProjectApplication implements CommandLineRunner {
-	
+
 	@Autowired
 	private EmployeeService employeeService;
 
 	public static void main(String[] args) {
 	SpringApplication.run(PdfProjectApplication.class, args);
+	
 	}
 
 	@Override
@@ -60,7 +63,7 @@ public class PdfProjectApplication implements CommandLineRunner {
 			emp6.setEmpSal(60000);
 			
 			Employee emp7= new Employee();
-			emp7.setEmpName("Sonan");
+			emp7.setEmpName("Soniya");
 			emp7.setEmpCity("Delhi");
 			emp7.setEmpDept("Developement");
 			emp7.setEmpSal(20000);
@@ -71,23 +74,21 @@ public class PdfProjectApplication implements CommandLineRunner {
 			emp8.setEmpDept("HR");
 			emp8.setEmpSal(80000);
 			
-			employeeService.addEmp(emp);
+			employeeService.saveEmp(emp);
 			
-			employeeService.addEmp(emp2);
+			employeeService.saveEmp(emp2);
 			
-			employeeService.addEmp(emp3);
+			employeeService.saveEmp(emp3);
 			
-			employeeService.addEmp(emp4);
+			employeeService.saveEmp(emp4);
 			
-			employeeService.addEmp(emp5);
+			employeeService.saveEmp(emp5);
 			
-			employeeService.addEmp(emp6);
+			employeeService.saveEmp(emp6);
 			
-			employeeService.addEmp(emp7);
+			employeeService.saveEmp(emp7);
 			
-			employeeService.addEmp(emp8);
+			employeeService.saveEmp(emp8);
 		
 			
-	}
-
-}
+	}}

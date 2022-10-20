@@ -5,6 +5,9 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletResponse;
 
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.stereotype.Component;
+
 import com.lowagie.text.Document;
 import com.lowagie.text.DocumentException;
 import com.lowagie.text.Font;
@@ -18,6 +21,7 @@ import com.lowagie.text.pdf.PdfPTable;
 import com.lowagie.text.pdf.PdfWriter;
 import com.vivek.pdf.entity.Employee;
 
+@Component
 public class PDFGenerator {
 	public void generate(List <Employee> employeeList, HttpServletResponse response) throws DocumentException, IOException{
 		Document document = new Document(PageSize.A4);

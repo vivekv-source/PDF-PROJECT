@@ -7,16 +7,13 @@ import com.vivek.pdf.entity.Employee;
 public interface EmployeeService {
 	
 //	Get
-	void addEmp(Employee employee);
-	List<Employee> getEmployeeList();
+	public List<Employee> getAllEmp(); 
 	
 //	Save
-//	public void saveEmp(Employee emp);
-//	public void saveAllEmp(List<Employee> emplist);
-//	
-////	Delete
-//	public void deleteEmpById(Integer empId);
-//	public void deleteAllEmp();
+	public void saveEmp(Employee emp);
+		
+//	Delete
+	public void deleteAllEmp();
 	
 
 }

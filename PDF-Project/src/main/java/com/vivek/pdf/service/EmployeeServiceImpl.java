@@ -11,48 +11,26 @@ import com.vivek.pdf.repository.EmployeeRepo;
 
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
-	
+
 	@Autowired
-	EmployeeRepo empRepo;
+	private EmployeeRepo repo;
 
 	@Override
-	public void addEmp(Employee employee) {
-		empRepo.save(employee);
-		
-	}
-
-	@Override
-	public List<Employee> getEmployeeList() {
-		Iterable<Employee> empItr = empRepo.findAll();
-		List<Employee> emplist= new ArrayList<Employee>();
-		empItr.forEach(x-> emplist.add(x));
+	public List<Employee> getAllEmp() {
+		Iterable<Employee> empItr = repo.findAll();
+		List<Employee> emplist = new ArrayList<Employee>();
+		empItr.forEach(x -> emplist.add(x));
 		return emplist;
-//		return empRepo.findAll();
-
 	}
 
-//	@Override
-//	public void saveEmp(Employee emp) {
-//		empRepo.save(emp);
-//	}
-//	@Override
-//	public void saveAllEmp(List<Employee> emplist) {
-//		empRepo.saveAll(emplist);
-//		
-//	}
-//
-//	@Override
-//	public void deleteEmpById(Integer empId) {
-//		empRepo.deleteById(empId);
-//		
-//	}
+	@Override
+	public void saveEmp(Employee emp) {
+		repo.save(emp);
+	}
 
-//	@Override
-//	public void deleteAllEmp() {
-//		empRepo.deleteAll();
-//		
-//	}
-
-	
+	@Override
+	public void deleteAllEmp() {
+		repo.deleteAll();
+	}
 
 }

@@ -26,7 +26,7 @@ public class Employee {
 	private Integer empSal;
 
 	public Employee() {
-		
+
 	}
 
 	public Employee(Integer empId, String empName, String empCity, String empDept, Integer empSal) {
@@ -83,6 +83,5 @@ public class Employee {
 		return "Employee [empId=" + empId + ", empName=" + empName + ", empCity=" + empCity + ", empDept=" + empDept
 				+ ", empSal=" + empSal + "]";
 	}
-	
-	
+
 }
